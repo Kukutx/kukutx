@@ -1,7 +1,5 @@
 ### Hi there 👋
 
-<!--
-**Kukutx/kukutx** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
@@ -13,5 +11,5 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
-I am a young man who loves programming and the Internet. Start learning programming in 2020. I want to be a hacker or full-stack developer. i like open source.
+
+I am a young Chinese and I like programming and the Internet. I live in Italy and have been learning programming since early 2020. I want to be a hacker or full-stack developer. I like open source.
