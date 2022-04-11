@@ -1,7 +1,7 @@
 ### Hi there 👋
 Hi there! I'm kukutx.
 
-I am a young Chinese and I like programming and the Internet. I live in Italy and have been learning programming since early 2020. I want to be a hacker or full-stack developer. I like open source.
+I am a young Chinese and I like programming and the Internet. I live in Italy and have been learning programming since early 2020. I want to be a full-stack developer. I like open source.
 
 <!--
 **djh-sudo/djh-sudo** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
