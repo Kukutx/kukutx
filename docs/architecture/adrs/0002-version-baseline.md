@@ -4,7 +4,7 @@
 
 ## 锁定版本
 
-- Node.js `24.13.2`
+- Node.js `24.18.0`
 - pnpm `11.7.0`
 - TypeScript `6.0.3`
 - Turborepo `2.10.0`
@@ -19,4 +19,4 @@
 
 ## 依据
 
-版本通过 GitHub 中的官方 Expo、.NET 发布资料和 Crew 当前生产依赖交叉核验。禁止使用 canary、RC 或 beta。依赖升级必须经过兼容性、许可证、Migration 和回归测试。
+版本通过 GitHub 中的 Node.js LTS 变更记录、官方 Expo、.NET 发布资料和 Crew 当前生产依赖交叉核验。禁止使用 canary、RC 或 beta。依赖升级必须经过兼容性、许可证、Migration 和回归测试。
