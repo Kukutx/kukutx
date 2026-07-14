@@ -2,6 +2,9 @@ packages:
   - apps/*
   - packages/*
 
+# 新版本依赖至少经过 24 小时观察期，降低供应链突发风险。
+minimumReleaseAge: 1440
+
 # pnpm 11 的统一安装脚本策略：仅明确标记为 true 的包可执行生命周期脚本。
 allowBuilds:
   '@firebase/util': true
