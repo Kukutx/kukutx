@@ -41,6 +41,7 @@ jobs:
       - name: Install JavaScript dependencies
         run: |
           if [[ "$GITHUB_EVENT_NAME" == "push" ]]; then
+            rm -f pnpm-lock.yaml
             tools/ci/run-and-report.sh "Install JavaScript dependencies" pnpm install --no-frozen-lockfile
           else
             tools/ci/run-and-report.sh "Install JavaScript dependencies" pnpm install --frozen-lockfile
