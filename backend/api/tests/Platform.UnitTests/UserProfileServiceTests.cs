@@ -8,7 +8,7 @@ namespace Platform.UnitTests;
 public sealed class UserProfileServiceTests
 {
     [Fact]
-    public async Task GetOrCreate_returns_default_profile()
+    public async Task GetOrCreateReturnsDefaultProfile()
     {
         var now = new DateTimeOffset(2026, 7, 14, 8, 0, 0, TimeSpan.Zero);
         var store = new InMemoryUserAccountStore();
@@ -25,7 +25,7 @@ public sealed class UserProfileServiceTests
     }
 
     [Fact]
-    public async Task Update_rejects_unsupported_locale()
+    public async Task UpdateRejectsUnsupportedLocale()
     {
         var store = new InMemoryUserAccountStore();
         var service = new UserProfileService(store, new FixedClock(DateTimeOffset.UtcNow));
