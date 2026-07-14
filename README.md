@@ -11,7 +11,7 @@
 ## 环境
 
 - Node.js `24.18.0`
-- pnpm `11.7.0`
+- pnpm `11.13.0`
 - TypeScript `6.0.3`
 - Expo SDK `56.0.5` / React Native `0.86.0`
 - Next.js `16.2.9`

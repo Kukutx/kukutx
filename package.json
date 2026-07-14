@@ -2,10 +2,10 @@
   "name": "overseas-community-platform",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@11.7.0",
+  "packageManager": "pnpm@11.13.0",
   "engines": {
     "node": "24.18.0",
-    "pnpm": "11.7.0"
+    "pnpm": "11.13.0"
   },
   "scripts": {
     "dev": "turbo run dev --parallel",
