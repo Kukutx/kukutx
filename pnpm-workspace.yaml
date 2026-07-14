@@ -1,3 +1,10 @@
 packages:
   - apps/*
   - packages/*
+
+# 仅批准经过审阅且构建链实际需要的安装脚本，其他依赖默认禁止执行。
+onlyBuiltDependencies:
+  - '@firebase/util'
+  - protobufjs
+  - sharp
+  - unrs-resolver
