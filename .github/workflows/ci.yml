@@ -7,7 +7,7 @@ on:
   pull_request:
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 concurrency:
@@ -33,24 +33,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24.18.0
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
 
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.0.x
 
       - name: Install JavaScript dependencies
-        run: tools/ci/run-and-report.sh "Install JavaScript dependencies" pnpm install --no-frozen-lockfile
-
-      - name: Persist generated lockfile
-        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
-        run: |
-          if [[ -n "$(git status --porcelain -- pnpm-lock.yaml)" ]]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add pnpm-lock.yaml
-            git commit -m "chore: lock bootstrap dependencies [skip ci]"
-            git push
-          fi
+        run: tools/ci/run-and-report.sh "Install JavaScript dependencies" pnpm install --frozen-lockfile
 
       - name: Restore .NET dependencies
         run: tools/ci/run-and-report.sh "Restore .NET dependencies" dotnet restore backend/api/Platform.slnx
