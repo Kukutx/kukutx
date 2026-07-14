@@ -2,9 +2,9 @@ packages:
   - apps/*
   - packages/*
 
-# 仅批准经过审阅且构建链实际需要的安装脚本，其他依赖默认禁止执行。
-onlyBuiltDependencies:
-  - '@firebase/util'
-  - protobufjs
-  - sharp
-  - unrs-resolver
+# pnpm 11 的统一安装脚本策略：仅明确标记为 true 的包可执行生命周期脚本。
+allowBuilds:
+  '@firebase/util': true
+  protobufjs: true
+  sharp: true
+  unrs-resolver: true
