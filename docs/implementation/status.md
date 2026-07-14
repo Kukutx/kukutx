@@ -17,12 +17,12 @@
 - 完成 PostgreSQL `xmin` 乐观并发、`If-Match` ETag、标准 Problem Details 和稳定错误码。
 - 完成 EF Core Migration、OpenAPI 契约、TypeScript Client 生成及漂移检查。
 - 完成 Web 邮箱登录和资料流程、Expo 登录和资料流程、SecureStore 认证持久化适配。
-- 提交 `pnpm-lock.yaml`；pnpm 安装脚本使用 `allowBuilds` 最小 Allowlist。
+- 提交 `pnpm-lock.yaml`；CI 使用 `--frozen-lockfile`，依赖发布至少经过 1440 分钟观察期，安装脚本通过 `allowBuilds` 最小 Allowlist。
 - 修复 Microsoft.OpenApi 高危漏洞并保持 ASP.NET Core 10.0.9 源生成器兼容，固定为 2.7.5。
 
 ## 真实验证
 
-GitHub Actions CI Run `29318605823` 已通过全部门禁：
+GitHub Actions CI Run `29319370187` 已在冻结锁文件模式下通过全部门禁：
 
 - JavaScript 依赖安装：通过。
 - NuGet Restore：通过，漏洞警告仍按错误处理。
