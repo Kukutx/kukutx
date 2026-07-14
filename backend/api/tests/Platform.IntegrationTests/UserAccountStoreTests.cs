@@ -26,7 +26,7 @@ public sealed class UserAccountStoreTests : IAsyncLifetime
     }
 
     [Fact]
-    public async Task GetOrCreate_is_idempotent_across_contexts()
+    public async Task GetOrCreateIsIdempotentAcrossContexts()
     {
         var identity = new AuthenticatedIdentity("firebase-integration-1", "person@example.com");
         Guid firstId;
