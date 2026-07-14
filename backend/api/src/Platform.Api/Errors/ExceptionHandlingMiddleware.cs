@@ -2,7 +2,7 @@ using Platform.Application.Common;
 
 namespace Platform.Api.Errors;
 
-public sealed class ExceptionHandlingMiddleware(
+public sealed partial class ExceptionHandlingMiddleware(
     RequestDelegate next,
     ILogger<ExceptionHandlingMiddleware> logger)
 {
@@ -42,7 +42,7 @@ public sealed class ExceptionHandlingMiddleware(
         }
         catch (Exception exception)
         {
-            logger.LogError(exception, "未处理异常，TraceId={TraceId}", context.TraceIdentifier);
+            LogUnhandledException(logger, exception, context.TraceIdentifier);
             await WriteProblemAsync(
                 context,
                 StatusCodes.Status500InternalServerError,
@@ -72,4 +72,13 @@ public sealed class ExceptionHandlingMiddleware(
             detail: detail,
             extensions: extensions).ExecuteAsync(context);
     }
+
+    [LoggerMessage(
+        EventId = 1002,
+        Level = LogLevel.Error,
+        Message = "未处理异常，TraceId={TraceId}")]
+    private static partial void LogUnhandledException(
+        ILogger logger,
+        Exception exception,
+        string traceId);
 }

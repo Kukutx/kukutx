@@ -11,7 +11,7 @@ public static class FirebaseAuthenticationDefaults
     public const string Scheme = "Firebase";
 }
 
-public sealed class FirebaseAuthenticationHandler(
+public sealed partial class FirebaseAuthenticationHandler(
     IOptionsMonitor<AuthenticationSchemeOptions> options,
     ILoggerFactory logger,
     UrlEncoder encoder,
@@ -52,8 +52,16 @@ public sealed class FirebaseAuthenticationHandler(
         }
         catch (Exception exception) when (exception is not OperationCanceledException)
         {
-            Logger.LogWarning("Firebase Token 验证失败：{ExceptionType}", exception.GetType().Name);
+            LogFirebaseTokenValidationFailure(Logger, exception.GetType().Name);
             return AuthenticateResult.Fail("Token 无效、已过期或已撤销。");
         }
     }
+
+    [LoggerMessage(
+        EventId = 1001,
+        Level = LogLevel.Warning,
+        Message = "Firebase Token 验证失败：{ExceptionType}")]
+    private static partial void LogFirebaseTokenValidationFailure(
+        ILogger logger,
+        string exceptionType);
 }
