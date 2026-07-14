@@ -1,55 +1,38 @@
-[//]: !(https://user-images.githubusercontent.com/507615/90595977-95e70e80-e220-11ea-864a-6a61adaff212.png)
-[//]: !(https://komarev.com/ghpvc/?username=Kukutx&style=flat-square)
+# Overseas Chinese Community & Direct Recruitment Platform
 
-<!--
-**Kukutx/kukutx** is a special repository because this README appears on my GitHub profile.
--->
+面向海外华人的本地社区与可信直聘平台。当前分支为独立工程分支，不修改 GitHub Profile 的 `main` 分支。
 
-<img align="right" top="500" height="300" width="400" alt="GIF" src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif">
+## 当前范围
 
-## <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px" height="30px">&nbsp;***About me***
+- Phase 0：产品边界、架构、权限、数据分类、威胁模型和 ADR。
+- Phase 1：pnpm + Turborepo Monorepo、Expo、Next.js、ASP.NET Core、PostgreSQL/PostGIS、Redis、本地 Docker 和 CI 基础。
+- Phase 2 首个切片：Firebase 身份验证、幂等用户建档与个人资料 API。
 
-Hi there! I'm **kukutx**.
+## 环境
 
-I am a Chinese full-stack developer living in Italy. I started programming in 2020. I enjoy building apps, websites, APIs, and useful tools.
+- Node.js `24.13.2`
+- pnpm `11.7.0`
+- TypeScript `6.0.3`
+- Expo SDK `56.0.5` / React Native `0.86.0`
+- Next.js `16.2.9`
+- .NET SDK `10.0.109` / .NET `10.0.9`
+- PostgreSQL `18` + PostGIS `3.6`
 
-- What I know best: Flutter, Dart, .NET, C#, Next.js, React, TypeScript, PostgreSQL, Firebase, Google Cloud, Vercel, Stripe
-- I am interested in full-stack development, cloud-native apps, AI-assisted development, and open source.
-- I care about clean UI, reliable APIs, clear architecture, and products that actually ship.
+## 常用命令
 
-<a target="_blank" align="center">
-  <img align="left" width="250px" height="250px" style="margin-right:25px;" alt="Unicorn" src="https://c.tenor.com/GN73MKBawZYAAAAi/busy-cute.gif" />
-</a>&nbsp;
+```bash
+pnpm install
+pnpm dev
+pnpm check
+pnpm db:migrate
+pnpm api:generate
+pnpm api:check-drift
+```
 
-**Languages and tools:**
+本地基础设施：
 
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/flutter/flutter.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/dart/dart.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/csharp/csharp.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/dotnet/dotnet.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/postgresql/postgresql.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/typescript/typescript.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/nextjs/nextjs.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/tailwind/tailwind.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/firebase/firebase.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/google-cloud/google-cloud.png"></code>
-<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/git/git.png"></code>
+```bash
+docker compose up -d
+```
 
-| <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats-one-bice.vercel.app/api?username=Kukutx&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="kukutx's github stats" /></a> | <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=Kukutx&layout=compact&theme=buefy&hide_border=true" alt="Top Language" /></a> |
-| ------------- | ------------- |
-
-##
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Ubuntu&color=0EAA20&vCenter=true&lines=Full-stack+developer.;Thanks+for+visiting!+You're+welcome!)](https://git.io/typing-svg)
-
-<!--ROACH&SPIDER-->
-<p align="left">
-  <img src="https://media.giphy.com/media/2fC8cduAc35UIAxHDE/giphy.gif" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://c.tenor.com/3dgbcMt6Kx4AAAAi/spider-insect.gif" width="40">
-</p>
-
-<p align="left">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0EAA20,100:02569B&height=100&section=footer" width="100%" alt="Footer">
-</p>
+项目事实与实施状态见 `docs/`。

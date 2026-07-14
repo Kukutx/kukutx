@@ -1,0 +1,36 @@
+{
+  "name": "@platform/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "dev": "expo start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/routes.test.mjs",
+    "test:e2e": "node --test tests/routes.test.mjs",
+    "build": "expo export --platform android --output-dir dist"
+  },
+  "dependencies": {
+    "@platform/api-client": "workspace:*",
+    "@platform/i18n": "workspace:*",
+    "expo": "56.0.5",
+    "expo-router": "56.2.7",
+    "expo-secure-store": "56.0.4",
+    "expo-status-bar": "56.0.4",
+    "firebase": "12.15.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.0",
+    "react-native-safe-area-context": "5.7.0",
+    "react-native-screens": "4.26.0-nightly-20260625-9b9b39fa5",
+    "react-native-web": "0.21.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17",
+    "eslint": "9.39.4",
+    "eslint-config-expo": "56.0.4",
+    "typescript": "6.0.3"
+  }
+}

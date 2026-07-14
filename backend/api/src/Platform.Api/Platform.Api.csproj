@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Platform.Application/Platform.Application.csproj" />
+    <ProjectReference Include="../Platform.Infrastructure/Platform.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "NeighbourHire",
+    "slug": "neighbour-hire",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "neighbourhire",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "plugins": ["expo-router", "expo-secure-store"],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.neighbourhire"
+    },
+    "android": {
+      "package": "com.example.neighbourhire"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - feat/overseas-community-platform-bootstrap
+  pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.7.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.13.2
+          cache: pnpm
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Install JavaScript dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Persist generated lockfile
+        if: github.event_name == 'push' && github.actor != 'github-actions[bot]'
+        run: |
+          if ! git diff --quiet -- pnpm-lock.yaml; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add pnpm-lock.yaml
+            git commit -m "chore: lock bootstrap dependencies [skip ci]"
+            git push
+          fi
+
+      - name: Restore .NET dependencies
+        run: dotnet restore backend/api/Platform.slnx
+
+      - name: Verify infrastructure definition
+        run: pnpm infra:validate
+
+      - name: Verify generated API client
+        run: pnpm api:check-drift
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Type check
+        run: pnpm typecheck
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build

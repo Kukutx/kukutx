@@ -1,0 +1,38 @@
+{
+  "name": "overseas-community-platform",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": "24.13.2",
+    "pnpm": "11.7.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:mobile": "pnpm --dir apps/mobile start",
+    "dev:web": "pnpm --dir apps/web dev",
+    "dev:api": "dotnet watch --project backend/api/src/Platform.Api/Platform.Api.csproj",
+    "lint": "turbo run lint && dotnet format backend/api/Platform.slnx --verify-no-changes --no-restore",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test && dotnet test backend/api/Platform.slnx --no-restore",
+    "test:e2e": "turbo run test:e2e",
+    "test:integration": "dotnet test backend/api/tests/Platform.IntegrationTests/Platform.IntegrationTests.csproj --no-restore",
+    "test:load": "k6 run backend/api/load-tests/smoke.js",
+    "build": "turbo run build && dotnet build backend/api/Platform.slnx --configuration Release --no-restore",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm api:check-drift",
+    "api:generate": "node tools/openapi/generate.mjs",
+    "api:check-drift": "node tools/openapi/check-drift.mjs",
+    "db:migrate": "dotnet ef database update --project backend/api/src/Platform.Infrastructure/Platform.Infrastructure.csproj --startup-project backend/api/src/Platform.Api/Platform.Api.csproj",
+    "db:verify": "dotnet ef migrations list --project backend/api/src/Platform.Infrastructure/Platform.Infrastructure.csproj --startup-project backend/api/src/Platform.Api/Platform.Api.csproj",
+    "infra:validate": "docker compose config --quiet"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@types/node": "24.13.2",
+    "concurrently": "10.0.3",
+    "eslint": "9.39.4",
+    "prettier": "3.9.1",
+    "turbo": "2.10.0",
+    "typescript": "6.0.3"
+  }
+}

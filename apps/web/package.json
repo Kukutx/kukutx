@@ -1,0 +1,31 @@
+{
+  "name": "@platform/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/routes.test.mjs",
+    "test:e2e": "node --test tests/routes.test.mjs",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@platform/api-client": "workspace:*",
+    "@platform/i18n": "workspace:*",
+    "firebase": "12.15.0",
+    "next": "16.2.9",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.1",
+    "@types/node": "24.13.2",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "4.3.1",
+    "typescript": "6.0.3"
+  }
+}

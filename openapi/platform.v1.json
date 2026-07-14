@@ -1,0 +1,137 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Overseas Community Platform API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    { "url": "/" }
+  ],
+  "paths": {
+    "/api/v1/me": {
+      "get": {
+        "operationId": "getCurrentUser",
+        "security": [{ "firebaseBearer": [] }],
+        "responses": {
+          "200": {
+            "description": "当前用户资料",
+            "headers": {
+              "ETag": { "schema": { "type": "string" } }
+            },
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/UserProfileDto" }
+              }
+            }
+          },
+          "401": { "$ref": "#/components/responses/Unauthorized" }
+        }
+      },
+      "put": {
+        "operationId": "updateCurrentUser",
+        "security": [{ "firebaseBearer": [] }],
+        "parameters": [
+          {
+            "name": "If-Match",
+            "in": "header",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UpdateUserProfileRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "已更新的资料",
+            "headers": {
+              "ETag": { "schema": { "type": "string" } }
+            },
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/UserProfileDto" }
+              }
+            }
+          },
+          "400": { "$ref": "#/components/responses/Problem" },
+          "401": { "$ref": "#/components/responses/Unauthorized" },
+          "409": { "$ref": "#/components/responses/Problem" },
+          "428": { "$ref": "#/components/responses/Problem" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "firebaseBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "Firebase ID Token"
+      }
+    },
+    "responses": {
+      "Problem": {
+        "description": "标准 Problem Details",
+        "content": {
+          "application/problem+json": {
+            "schema": { "$ref": "#/components/schemas/ProblemDetails" }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "未认证",
+        "content": {
+          "application/problem+json": {
+            "schema": { "$ref": "#/components/schemas/ProblemDetails" }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "UserProfileDto": {
+        "type": "object",
+        "required": ["id", "locale", "timeZoneId", "status", "version", "createdAt", "updatedAt"],
+        "properties": {
+          "id": { "type": "string", "format": "uuid" },
+          "email": { "type": "string", "format": "email", "nullable": true },
+          "displayName": { "type": "string", "nullable": true },
+          "locale": { "type": "string", "enum": ["zh-Hans", "zh-Hant", "en"] },
+          "timeZoneId": { "type": "string" },
+          "cityId": { "type": "string", "format": "uuid", "nullable": true },
+          "status": { "type": "string", "enum": ["Active", "Restricted", "Suspended", "DeletionPending", "Deleted"] },
+          "version": { "type": "integer", "format": "uint32" },
+          "createdAt": { "type": "string", "format": "date-time" },
+          "updatedAt": { "type": "string", "format": "date-time" }
+        }
+      },
+      "UpdateUserProfileRequest": {
+        "type": "object",
+        "required": ["locale", "timeZoneId"],
+        "properties": {
+          "displayName": { "type": "string", "maxLength": 80, "nullable": true },
+          "locale": { "type": "string", "enum": ["zh-Hans", "zh-Hant", "en"] },
+          "timeZoneId": { "type": "string", "maxLength": 64 },
+          "cityId": { "type": "string", "format": "uuid", "nullable": true }
+        }
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": { "type": "string", "nullable": true },
+          "title": { "type": "string", "nullable": true },
+          "status": { "type": "integer", "nullable": true },
+          "detail": { "type": "string", "nullable": true },
+          "instance": { "type": "string", "nullable": true },
+          "code": { "type": "string", "nullable": true },
+          "traceId": { "type": "string", "nullable": true }
+        },
+        "additionalProperties": true
+      }
+    }
+  }
+}
