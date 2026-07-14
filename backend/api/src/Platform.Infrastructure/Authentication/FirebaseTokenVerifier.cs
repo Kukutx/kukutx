@@ -17,8 +17,10 @@ public sealed class FirebaseTokenVerifier(IConfiguration configuration) : IIdent
         string idToken,
         CancellationToken cancellationToken)
     {
-        cancellationToken.ThrowIfCancellationRequested();
-        var decoded = await firebaseAuth.Value.VerifyIdTokenAsync(idToken, checkRevoked: true);
+        var decoded = await firebaseAuth.Value.VerifyIdTokenAsync(
+            idToken,
+            checkRevoked: true,
+            cancellationToken);
 
         var email = decoded.Claims.TryGetValue("email", out var rawEmail)
             ? rawEmail?.ToString()
