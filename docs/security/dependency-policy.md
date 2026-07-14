@@ -5,4 +5,5 @@
 - 当前批准项：`@firebase/util`、`protobufjs`、`sharp`、`unrs-resolver`，分别由 Firebase、协议序列化、Next.js 图片处理和模块解析链使用。
 - 新增批准项必须说明调用链、维护状态、许可证和替代方案，并经过 CI 构建验证。
 - CI 不允许通过全局放开生命周期脚本来绕过供应链门禁。
-- NuGet Restore 将漏洞警告视为错误；当前显式固定 `Microsoft.OpenApi 3.7.0`，避免 ASP.NET OpenAPI 的旧传递版本引入已知高危漏洞。
+- NuGet Restore 将漏洞警告视为错误。
+- `Microsoft.AspNetCore.OpenApi 10.0.9` 依赖 OpenAPI.NET 2.x 契约；`Microsoft.OpenApi` 固定为 `2.7.5`，这是修复 CVE-2026-49451 的首个 2.x 版本。不得跨到不兼容的 3.x 规避漏洞。
