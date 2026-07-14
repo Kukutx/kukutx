@@ -7,21 +7,27 @@ import {
   type Persistence,
 } from 'firebase/auth';
 
-const secureStorePersistence: Persistence = {
+const secureStorePersistence = {
   type: 'LOCAL',
   async _isAvailable() {
     return SecureStore.isAvailableAsync();
   },
-  async _set(key, value) {
+  async _set(key: string, value: string) {
     await SecureStore.setItemAsync(key, value);
   },
-  async _get(key) {
+  async _get(key: string) {
     return SecureStore.getItemAsync(key);
   },
-  async _remove(key) {
+  async _remove(key: string) {
     await SecureStore.deleteItemAsync(key);
   },
-};
+  _addListener() {
+    // SecureStore 不提供跨上下文事件；移动端由 Firebase Auth 内部状态事件驱动。
+  },
+  _removeListener() {
+    // 与 _addListener 对称保留。
+  },
+} as unknown as Persistence;
 
 const firebaseConfig = {
   apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY ?? 'missing',

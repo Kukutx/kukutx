@@ -1,12 +1,8 @@
-import js from '@eslint/js';
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
-export default [
-  js.configs.recommended,
-  {
-    files: ['src/**/*.ts'],
-    languageOptions: {
-      parserOptions: { sourceType: 'module' },
-    },
-  },
+export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
   { ignores: ['src/generated.ts'] },
-];
+);

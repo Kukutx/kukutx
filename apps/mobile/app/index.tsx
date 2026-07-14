@@ -136,7 +136,7 @@ export default function HomeScreen() {
               <Text style={styles.label}>{t(locale, 'password')}</Text>
               <TextInput
                 accessibilityLabel={t(locale, 'password')}
-                autoComplete="password"
+                autoComplete="current-password"
                 onChangeText={setPassword}
                 secureTextEntry
                 style={styles.input}
