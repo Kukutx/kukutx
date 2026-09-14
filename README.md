@@ -31,6 +31,7 @@ I am a Chinese full-stack developer living in Italy. I started programming in 20
 <code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/typescript/typescript.png"></code>
 <code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png"></code>
 <code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/react/react.png"></code>
+<code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/expo/expo.png"></code>
 <code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/nextjs/nextjs.png"></code>
 <code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/tailwind/tailwind.png"></code>
 <code><img height="40" width="40" src="https://raw.githubusercontent.com/github/explore/main/topics/firebase/firebase.png"></code>
