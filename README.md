@@ -13,7 +13,7 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Ubuntu&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=720&lines=Hi+there+%F0%9F%91%8B%2C+I+am+Kukutx;Full-stack+developer+in+Italy;Flutter+%C2%B7+.NET+%C2%B7+Next.js+%C2%B7+React;Building+apps%2C+APIs%2C+and+cloud-native+products" alt="Typing SVG">
+    <img src="https://readme-typing-svg.demolab.com?font=Ubuntu&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=720&lines=Hi+there+%F0%9F%91%8B%2C+I%27m+Kukutx;Full-stack+Developer+%C2%B7+Flutter+%C2%B7+.NET+%C2%B7+TypeScript;Building+clean%2C+reliable+products+that+actually+ship." alt="Typing SVG">
   </a>
 </p>
 
@@ -63,18 +63,18 @@ I am a Chinese full-stack developer living in Italy. I started programming in 20
 </picture>
 
 
-<!--ROACH&SPIDER-->
-<p align="left">
-  <img src="https://media.giphy.com/media/2fC8cduAc35UIAxHDE/giphy.gif" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://c.tenor.com/3dgbcMt6Kx4AAAAi/spider-insect.gif" width="40">
-</p>
-
 ### 👀 Profile Views
 
 counting of visitors to this page in this section started from October 6, 2026
 
 <p align="left">
   <img src="https://count.getloli.com/get/@Kukutx.github.readme" alt="Profile views">
+</p>
+
+<!--ROACH&SPIDER-->
+<p align="left">
+  <img src="https://media.giphy.com/media/2fC8cduAc35UIAxHDE/giphy.gif" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://c.tenor.com/3dgbcMt6Kx4AAAAi/spider-insect.gif" width="40">
 </p>
 
 <p align="left">
