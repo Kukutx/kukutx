@@ -5,6 +5,18 @@
 **Kukutx/kukutx** is a special repository because this README appears on my GitHub profile.
 -->
 
+
+<!-- Header artwork source: https://github.com/BEPb/BEPb -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/BEPb/BEPb/main/src/header_.png" width="100%" alt="Developer technology banner">
+</p>
+
+<p align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Ubuntu&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=720&lines=Hi+there+%F0%9F%91%8B%2C+I+am+Kukutx;Full-stack+developer+in+Italy;Flutter+%C2%B7+.NET+%C2%B7+Next.js+%C2%B7+React;Building+apps%2C+APIs%2C+and+cloud-native+products" alt="Typing SVG">
+  </a>
+</p>
+
 <img align="right" top="500" height="300" width="400" alt="GIF" src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif">
 
 ## <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px" height="30px">&nbsp;***About me***
@@ -41,14 +53,28 @@ I am a Chinese full-stack developer living in Italy. I started programming in 20
 | <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats-one-bice.vercel.app/api?username=Kukutx&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="kukutx's github stats" /></a> | <a href="https://github.com/anuraghazra/github-readme-stats"><img align="center" src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=Kukutx&layout=compact&theme=buefy&hide_border=true" alt="Top Language" /></a> |
 | ------------- | ------------- |
 
-##
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Ubuntu&color=0EAA20&vCenter=true&lines=Full-stack+developer.;Thanks+for+visiting!+You're+welcome!)](https://git.io/typing-svg)
+### 📈 GitHub Activity Graph
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kukutx/kukutx/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kukutx/kukutx/output/github-contribution-grid-snake.svg">
+  <img alt="Kukutx contribution snake" src="https://raw.githubusercontent.com/Kukutx/kukutx/output/github-contribution-grid-snake.svg">
+</picture>
+
 
 <!--ROACH&SPIDER-->
 <p align="left">
   <img src="https://media.giphy.com/media/2fC8cduAc35UIAxHDE/giphy.gif" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="https://c.tenor.com/3dgbcMt6Kx4AAAAi/spider-insect.gif" width="40">
+</p>
+
+### 👀 Profile Views
+
+counting of visitors to this page in this section started from October 6, 2026
+
+<p align="left">
+  <img src="https://count.getloli.com/get/@Kukutx.github.readme" alt="Profile views">
 </p>
 
 <p align="left">
