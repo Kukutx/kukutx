@@ -31,7 +31,7 @@ I am a Chinese full-stack developer living in Italy. I started programming in 20
 
 ### 🚀 What I'm building
 
-- **[Crew](https://crew-app.com)** — an app for sharing your interests and making plans around them. Live on Google Play and the App Store.
+- **[Crew](https://crew-app.com)** — an app for sharing your interests and making plans around them. Released on Google Play and the App Store.
 - **[DevMate](https://github.com/Kukutx/DevMate)** — a local-first MCP runtime that lets ChatGPT and Claude work on your own computer.
 - **[TradePilot 212](https://github.com/Kukutx/TradePilot212)** — a self-hosted Trading 212 app for ChatGPT and Claude; every Live order waits for your confirmation.
 - **[FolioWeave](https://github.com/Kukutx/folioweave)** — the open-source portfolio framework behind my site.
